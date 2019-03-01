@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML - 标签集合 - 常用标签</title>
+
+</head>
+
+<body>
+	<!-- 定义文档作者或者拥有者的联系信息 -->
+	<address>定义文档作者或者拥有者的联系信息，默认斜体字，不能放在p标签中</address>
+	<p style="border: 1px solid #000; padding: 20px;">
+		
+		<!-- 定义小号文本 -->
+		<small>我是定义的小号文本small标签-比font-size大小少一号</small>
+	</p>
+
+	<p style="border: 1px solid #000; padding: 20px;">
+		<span>我是节span</span>
+		<strong>我是强调文本标签+加粗</strong>
+		<em>我是强调文本标签+倾斜</em>
+		<del>我是被删除的文本（中横线）</del>
+		<br>
+		brbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbr简单折行
+		<br>
+		<i>我是倾斜的</i>
+		<b>我是加粗字体</b>
+		<u>我是带有下划线文本</u>
+		<a href="https://www.baidu.com">我是a标签锚点（可以去其他地方了）</a>
+	</p>
+	<pre style="border: 1px solid #000; padding: 20px;">
+		<table style="border: 1px solid #000; padding: 20px;">
+			<caption>我是表格标题</caption>
+			<thead>
+				<tr>
+					<th>我是表头th_1</th>
+					<th>我是表头th_2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>我是主体单元格_1</td>
+					<td>我是主体单元格_2</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td>我是在表注的单元格_1</td>
+					<td>我是在表注的单元格_2</td>
+				</tr>
+			</tfoot>
+		</table>
+		<form action="#" style="border: 1px solid #000; padding: 20px;">
+			<input type="text" id="ipt">
+			<label for="ipt">我是input元素的标注（for+id）</label>
+			<select name="下拉" id="xl">
+				<optgroup label="下拉分组optgroup_one">
+					<option value="选项1">我是下拉选项1</option>
+					<option value="选项2">我是下拉选项2</option>
+				</optgroup>
+				<optgroup label="下拉分组optgroup_two" disabled>
+					<option value="选项3">我是下拉选项3</option>
+					<option value="选项4">我是下拉选项4</option>
+				</optgroup>
+				<optgroup label="下拉分组optgroup_three">
+					<option value="选项5">我是下拉选项5</option>
+					<option value="选项6">我是下拉选项6</option>
+				</optgroup>
+			</select>
+			<textarea name="多行输入" id="txtarea" cols="20" rows="10">
+				我在这里输入的是控件里面的默认文本
+			</textarea>
+		</form>
+	</pre>
+	<ul style="border: 1px solid #000; padding: 20px;">
+		<li>我是li标签-无序列表</li>
+		<li>我是li标签-无序列表</li>
+	</ul>
+	<ol style="border: 1px solid #000; padding: 20px;">
+		<li>我是有序列表</li>
+		<li>我是有序列表</li>
+	</ol>
+	<dl style="border: 1px solid #000; padding: 20px;">
+		<dt>我是列表项目dt</dt>
+		<dd>我是列表项目的描述dd</dd>
+	</dl>	
+	<div style="border: 1px solid #000; padding: 20px;">
+		<hr>
+		hrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhr水平线
+		<hr>
+		<img src="http://pic.51yuansu.com/pic3/cover/02/17/94/59af06dd37a3d_610.jpg" alt="炫光" width="300">我是img标签，图像从我这儿来
+		<button>按钮键</button>
+	</div>
+</body>
+</html>
