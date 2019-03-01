@@ -1,0 +1,175 @@
+<!-- 声明文档类型 -->
+<!DOCTYPE html>
+
+<!-- 定义html文档 -->
+<html lang="en">
+
+<!-- 定义关于文档的信息 -->
+<head>
+
+	<!-- 定义关于html文档的元信息，助于SEO搜索 -->
+	<meta charset="UTF-8">
+
+	<!-- 定义文档标题，浏览器窗口名 -->
+	<title>HTML - 标签集合 - 常用标签</title>
+
+	<!-- 定义文档与外部资源的关系（外联css样式） -->
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- 定义文档标签样式 -->
+	<style>
+		/* ... */
+	</style>
+
+	<!-- 定义客户端脚本（外联脚本，js文件） -->
+	<script src="./scrpit_ar.js"></script>
+
+</head>
+
+<!-- 定义文档主体 -->
+<body>
+	<div style="border: 1px solid #000; padding: 20px;">
+		<!-- 定义html标题，h1只使用一次（为了优化语义作用），h系列不能相互嵌套 -->
+		<h1>我<h2>是<h3>H<h4>系<h5>列<h6>~</h6></h5></h4></h3></h2></h1>
+	</div>
+
+	<!-- 定义段落 -->
+	<p style="border: 1px solid #000; padding: 20px;">
+		我是p标签
+
+		<!-- 定义文档中的节（文本节） -->
+		<span>我是节span</span>
+
+		<!-- 定义强调文本 -->
+		<strong>我是强调文本标签+加粗</strong>
+		<!-- 定义强调文本 -->
+		<em>我是强调文本标签+倾斜</em>
+		<!-- 定义被删除文本（中横线） -->
+		<del>我是被删除的文本（中横线）</del>
+
+		<!-- 定义简单的折行 -->
+		<br>
+		brbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbrbr简单折行
+		<br>
+
+		<!-- 定义斜体字 -->
+		<i>我是倾斜的</i>
+		<!-- 定义粗体字 -->
+		<b>我是加粗字体</b>
+		<!-- 定义下划线文本 -->
+		<u>我是带有下划线文本</u>
+
+		<!-- 定义锚 -->
+		<a href="https://www.baidu.com">我是a标签锚点（可以去其他地方了）</a>
+	</p>
+
+	<!-- 定义预格式文本（可以记录文本中的空格、折行等）,pre中可以放任何标签 -->
+	<pre style="border: 1px solid #000; padding: 20px;">
+
+		<!-- 定义表格 -->
+		<table style="border: 1px solid #000; padding: 20px;">
+			<caption>我是表格标题</caption>
+			<!-- 定义表格中的表头内容 -->
+			<thead>
+				<!-- 定义表格行 -->
+				<tr>
+					<!-- 定义表格中表头的单元格（表头下放th） -->
+					<th>我是表头th_1</th>
+					<th>我是表头th_2</th>
+				</tr>
+			</thead>
+			
+			<!-- 定义表格中的主体内容 -->
+			<tbody>
+				<tr>
+
+					<!-- 定义表格中的主体下的单元格（主体下放td） -->
+					<td>我是主体单元格_1</td>
+					<td>我是主体单元格_2</td>
+				</tr>
+			</tbody>
+			
+			<!-- 定义表格中表注内容（脚注） -->
+			<tfoot>
+				<tr>
+					<td>我是在表注的单元格_1</td>
+					<td>我是在表注的单元格_2</td>
+				</tr>
+			</tfoot>
+		</table>
+		
+		<!-- 定义供用户输入的HTML表单 -->
+		<form action="#" style="border: 1px solid #000; padding: 20px;">
+			
+			<!-- 定义输入控件 -->
+			<input type="text" id="ipt">
+			<!-- 定义input元素的标注 -->
+			<label for="ipt">我是input元素的标注（for+id）</label>
+			
+			<!-- 定义选择列表（下拉列表） -->
+			<select name="下拉" id="xl">
+				我是选择列表或者叫我下拉列表
+
+				<!-- 定义选择列表中相关选项的组合 -->
+				<optgroup label="下拉分组optgroup_one">
+					<!-- 定义选择列表中的选项 -->
+					<option value="选项1">我是下拉选项1</option>
+					<option value="选项2">我是下拉选项2</option>
+				</optgroup>
+				<optgroup label="下拉分组optgroup_two" disabled>
+					<option value="选项3">我是下拉选项3</option>
+					<option value="选项4">我是下拉选项4</option>
+				</optgroup>
+				<optgroup label="下拉分组optgroup_three">
+					<option value="选项5">我是下拉选项5</option>
+					<option value="选项6">我是下拉选项6</option>
+				</optgroup>
+			</select>
+			
+			<!-- 定义多行的文本输入控件 -->
+			<textarea name="多行输入" id="txtarea" cols="20" rows="10">
+				我在这里输入的是控件里面的默认文本
+			</textarea>
+		</form>
+	
+	</pre>
+
+	<!-- 定义无序列表 -->
+	<ul style="border: 1px solid #000; padding: 20px;">
+
+		<!-- 定义列表的项目 -->
+		<li>我是li标签-无序列表</li>
+		<li>我是li标签-无序列表</li>
+	</ul>
+	
+	<!-- 定义有序列表 -->
+	<ol style="border: 1px solid #000; padding: 20px;">
+		<li>我是有序列表</li>
+		<li>我是有序列表</li>
+	</ol>
+	
+	<!-- 定义列表（自定义） -->
+	<dl style="border: 1px solid #000; padding: 20px;">
+		我的列表dl最外层标签
+		<!-- 定义列表的项目 -->
+		<dt>我是列表项目dt</dt>
+		<!-- 定义列表中项目的描述 -->
+		<dd>我是列表项目的描述dd</dd>
+	</dl>	
+
+	<!-- 定义文档中的节 -->
+	<div style="border: 1px solid #000; padding: 20px;">
+		我是div盒子标签
+		<!-- 定义水平线 -->
+		<hr>
+		hrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhr水平线
+		<hr>
+
+		<!-- 定义图像 -->
+		<img src="http://pic.51yuansu.com/pic3/cover/02/17/94/59af06dd37a3d_610.jpg" alt="炫光" width="300">我是img标签，图像从我这儿来
+
+		<!-- 定义按钮 -->
+		<button>按钮键</button>
+	</div>
+</body>
+</html>
