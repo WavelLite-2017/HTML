@@ -12,6 +12,9 @@
 
 	<!-- 定义文档标题，浏览器窗口名 -->
 	<title>HTML - 标签集合 - 常用标签</title>
+	
+	<!-- 定义页面所有链接的默认地址（href，可做根地址）或默认目标（target） -->
+	<base href="https:ls.com" target="_blank">
 
 	<!-- 定义文档与外部资源的关系（外联css样式） -->
 	<link rel="stylesheet" href="./style.css">
@@ -61,6 +64,8 @@
 
 		<!-- 定义锚 -->
 		<a href="https://www.baidu.com">我是a标签锚点（可以去其他地方了）</a>
+		<br>
+		<a href="/baseLabel">用于测试base标签，打开地址为https://ls.com/baseLabel</a>
 	</p>
 
 	<!-- 定义预格式文本（可以记录文本中的空格、折行等）,pre中可以放任何标签 -->
@@ -98,39 +103,44 @@
 			</tfoot>
 		</table>
 		
-		<!-- 定义供用户输入的HTML表单 -->
-		<form action="#" style="border: 1px solid #000; padding: 20px;">
-			
-			<!-- 定义输入控件 -->
-			<input type="text" id="ipt">
-			<!-- 定义input元素的标注 -->
-			<label for="ipt">我是input元素的标注（for+id）</label>
-			
-			<!-- 定义选择列表（下拉列表） -->
-			<select name="下拉" id="xl">
-				我是选择列表或者叫我下拉列表
+		<!-- 定义围绕表单中元素的边框 -->
+		<fieldset>
+			<!-- 定义fieldset元素的标题 -->
+			<legend>定义的fieldset元素的标题</legend>
+			<!-- 定义供用户输入的HTML表单 -->
+			<form action="#" style="border: 1px solid #000; padding: 20px;">
+				
+				<!-- 定义输入控件 -->
+				<input type="text" id="ipt">
+				<!-- 定义input元素的标注 -->
+				<label for="ipt">我是input元素的标注（for+id）</label>
+				
+				<!-- 定义选择列表（下拉列表） -->
+				<select name="下拉" id="xl">
+					我是选择列表或者叫我下拉列表
 
-				<!-- 定义选择列表中相关选项的组合 -->
-				<optgroup label="下拉分组optgroup_one">
-					<!-- 定义选择列表中的选项 -->
-					<option value="选项1">我是下拉选项1</option>
-					<option value="选项2">我是下拉选项2</option>
-				</optgroup>
-				<optgroup label="下拉分组optgroup_two" disabled>
-					<option value="选项3">我是下拉选项3</option>
-					<option value="选项4">我是下拉选项4</option>
-				</optgroup>
-				<optgroup label="下拉分组optgroup_three">
-					<option value="选项5">我是下拉选项5</option>
-					<option value="选项6">我是下拉选项6</option>
-				</optgroup>
-			</select>
-			
-			<!-- 定义多行的文本输入控件 -->
-			<textarea name="多行输入" id="txtarea" cols="20" rows="10">
-				我在这里输入的是控件里面的默认文本
-			</textarea>
-		</form>
+					<!-- 定义选择列表中相关选项的组合 -->
+					<optgroup label="下拉分组optgroup_one">
+						<!-- 定义选择列表中的选项 -->
+						<option value="选项1">我是下拉选项1</option>
+						<option value="选项2">我是下拉选项2</option>
+					</optgroup>
+					<optgroup label="下拉分组optgroup_two" disabled>
+						<option value="选项3">我是下拉选项3</option>
+						<option value="选项4">我是下拉选项4</option>
+					</optgroup>
+					<optgroup label="下拉分组optgroup_three">
+						<option value="选项5">我是下拉选项5</option>
+						<option value="选项6">我是下拉选项6</option>
+					</optgroup>
+				</select>
+				
+				<!-- 定义多行的文本输入控件 -->
+				<textarea name="多行输入" id="txtarea" cols="20" rows="10">
+					我在这里输入的是控件里面的默认文本
+				</textarea>
+			</form>
+		</fieldset>
 	
 	</pre>
 
