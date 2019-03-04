@@ -49,26 +49,38 @@
 		</code>
 	</pre>
 
+	<table border=1>
+		<!-- 定义表格中提供格式化的列组，只有span和width有效，span对应列，width的对应宽，不建议使用 -->
+		<colgroup span="1" width="100px" align="center"></colgroup>
+		<!-- 定义表格中一个或多个列属性值，只有span和width有效，不建议使用 -->
+		<!-- 
+			span：包含前面所有的（不覆盖前面设定的），width针对的是span覆盖的
+		 -->
+		<col span="2" width="400px">
+		<thead>
+			<tr>
+				<th>1</th>
+				<th>2</th>
+				<th>3</th>
+				<th>4</th>
+			</tr>
+			
+		</thead>
+		<tbody>
+			<tr>
+				<td>aa</td>
+				<td>bb</td>
+				<td>cc</td>
+				<td>dd</td>
+			</tr>
+			<tr>
+				<td>ee</td>
+				<td>ff</td>
+				<td>gg</td>
+				<td>hh</td>
+			</tr>
+		</tbody>
+	</table>
 
-
-	<ul style="border: 1px solid #000; padding: 20px;">
-		<li>我是li标签-无序列表</li>
-		<li>我是li标签-无序列表</li>
-	</ul>
-	<ol style="border: 1px solid #000; padding: 20px;">
-		<li>我是有序列表</li>
-		<li>我是有序列表</li>
-	</ol>
-	<dl style="border: 1px solid #000; padding: 20px;">
-		<dt>我是列表项目dt</dt>
-		<dd>我是列表项目的描述dd</dd>
-	</dl>	
-	<div style="border: 1px solid #000; padding: 20px;">
-		<hr>
-		hrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhrhr水平线
-		<hr>
-		<img src="http://pic.51yuansu.com/pic3/cover/02/17/94/59af06dd37a3d_610.jpg" alt="炫光" width="300">我是img标签，图像从我这儿来
-		<button>按钮键</button>
-	</div>
 </body>
 </html>
