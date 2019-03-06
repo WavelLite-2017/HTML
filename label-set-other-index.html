@@ -3,7 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>HTML - 标签集合 - 不常用标签</title>
-	
+	<!-- 定义针对不支持客户端脚本的用户的替代内容 -->
+	<noscript>在浏览器不支持js脚本或禁用了js脚本的情况下，显示这儿的内容</noscript>
+	<script>
+		document.write('非常棒，你的浏览器支持js脚本~')
+	</script>
 </head>
 
 <body>
@@ -32,6 +36,15 @@
 		h<sub>2</sub> + o = h<sub>2</sub>o ==> 下标
 		<!-- 定义文本的变量部分 -->
 		<var>表示这是一个变量</var>
+
+		<br>
+		<!-- 定义文本方向（ltr == left to right（默认）） -->
+		<bdo dir="rtl">我是倒着写的文字（从右往左写）~</bdo>
+		<br>
+		<!-- 定义被插入文本（配合与del一起使用，表示删除与更新） -->
+		<del>被删除的文本</del> - <ins>被插入文本</ins>
+		<br>
+
 	</p>
 
 	<pre style="border: 1px solid #000; padding: 20px;">
@@ -81,6 +94,72 @@
 			</tr>
 		</tbody>
 	</table>
+	
+	<!-- img标签的usemap对应map中的name（规定）或id（唯一），进行映射 -->
+	<img src="./images/atup.jpg" width="400" usemap="person" alt="">
+	<!-- 定义图像映射（规定映射区域） -->
+	<map name="person">
+		<!-- 定义图像映射内部的区域（规定映射中的图形、坐标、大小、去向） -->
+		<area shape="circle" coords="0,0,30" href="https://www.baidu.com" alt="去百度">
+	</map>
+	
+	<br>
+	<!-- 定义键盘文本（感觉暂只是概念） -->
+	<kbd>Esc</kbd>
+	<br>
+	<!-- 定义命令的列表或菜单（标签可以读取，感觉暂无实际意义） -->
+	<menu label="Edit">
+		菜单
+		<!-- 定义用户可以从弹出菜单调用的命令/菜单项目（暂只有火狐支持） -->
+		<menuitem disabeld>定义用户可以从弹出菜单调用的命令/菜单项目</menuitem>
+	</menu>
+	<!-- 定义打字机文本 -->
+	等宽字体<tt>等宽字体</tt>
 
+	<!-- 定义内嵌对象（右键被禁用）(老式播放音频视频的操作，结合param标签一起使用) -->
+	<object data="./images/atup.jpg" type=".avi" width="200px" height="200px" classid="./images/lolmv.avi">
+		<!-- 定义对象的参数 -->
+		<param name="filename" value="./images/lolmv.avi">
+	</object>
+
+	<br>
+	<p>
+		<!-- 定义引用citation，表现为斜体（引用文献等第三方参考资料） -->
+		<cite>《一千零一夜》</cite>：日日夜夜的激励
+	</p>
+	<!-- 定义长的引用（比如一段话等），有自己的格式（块级元素），padding值有 -->
+	<blockquote>
+		人生如戏，戏如人生。没有我们不能演的角色，只有不会演的演员。
+		--Sar
+	</blockquote>
+	<!-- 定义短的引用（比如一个词等），行业元素 -->
+	<q>疯狂</q>
+	<!-- 定义特殊术语或短语的定义，尽量少用 -->
+	<dfn>dfn定义一个定义项目</dfn>
+	
+	<br>
+	<!-- 定义框架集，不能与body一起使用 -->
+	<frameset cols="25%, 50%, 25%">
+		<!-- 定义框架集的窗口或框架 -->
+		<frame src="./ComHtml/frame_a.html">
+		<frame src="./ComHtml/frame_b.html">
+		<frame src="./ComHtml/frame_c.html">
+	</frameset>
+	<br>
+	<!-- 定义针对不支持框架用户的替代内容 -->
+	<noframes>该浏览器不支持框架集</noframes>
+	<br>
+	<!-- 定义内联框架 -->
+	<iframe
+		src="https://www.baidu.com"
+		frameborder="1"
+		width="600"
+		height="300"
+		scrolling="no"
+		seamless
+		marginwidth="100px"
+		marginheight='100px'
+		align="middle"
+	></iframe>
 </body>
 </html>
