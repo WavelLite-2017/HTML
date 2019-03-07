@@ -11,10 +11,13 @@
 		<h4>顶部页眉</h4>
 	</header>
 	<!-- 定义导航链接 -->
+
 	<nav>
 		<span>导航链接1</span>
 		<span>导航链接2</span>
 	</nav>
+	<!-- 定义section（块，节可理解为跟div差不多） -->
+	<section>区块、节</section>
 	<!-- 定义页面内容之外的内容（侧边栏） -->
 	<aside>
 		<ol>
@@ -44,5 +47,67 @@
 	<canvas width="300" height="150" style="border: 1px solid red">canvas</canvas>
 
 	<keygen name="security">
+	
+	<!-- 定义下拉列表（配合input，通过id识别，才能使用） -->
+	<datalist id="cars">
+		<!-- 下拉选项，在input中输入后进行匹配项 -->
+		<option value="BMW1">BMW</option>
+		<option value="Ford1">Ford</option>
+		<option value="Volvo1">Volvo</option>
+		<option value="KBK"></option>
+	</datalist>
+	<input type="text" id="myCar" list="cars">
+	
+	<!-- 定义任何类型的任务的进度（进度条，通过value和max实现） -->
+	<progress value="86" max="100">
+	</progress>
+	<progress value="8" max="100">10</progress>
+	<progress></progress>
+
+	<!-- 定义日期、时间（目前浏览器不支持该标签） -->
+	<time datatime="9:00">9:00上班</time>
+
+	<!-- 定义ruby注释（定义文字，通过rt来进行标注小字（如拼音）） -->
+	<ruby>
+		刘
+		<!-- 定义ruby注释的解释（标注小字，大小12px） -->
+		<rt>liu</rt>
+		青
+		<!-- 定义浏览器不支持ruby元素显示的内容 -->
+		<rp>S</rp>
+		<rt>qingˇ</rt>
+	</ruby>
+	
+	<!-- oninput事件 -->
+	<form action="index.php" oninput="x.value = a.value+b.value">
+		<input name="numa" type="text" id="a">
+		+
+		<input name="numb" type="text" id="b">
+		=
+		<!-- 定义输出的一些类型 -->
+		<output name="x" for="a b"></output>
+		<keygen challenge name="security">
+		<button>提交</button>
+	</form>
+
+	<!-- 定义元素的细节（详情文字） -->
+	<details>
+		<!-- 定义details元素的可见标题（点击显示details中的文本） -->
+		<summary>这是一个标签世界~~</summary>
+		<p>世界之大，无奇不有，伱我同在，心系HTML</p>
+	</details>
+
+	<!-- 定义媒介内容的分组，以及他们的标题（需要插入资源的时候可以用他，分组多个） -->
+	<figure>
+		<p>图像</p>
+		<!-- 定义figure元素的标题 -->
+		<figcaption>作者-wavellite</figcaption>
+		<img src="./images/atup.jpg" alt="" width="300">
+		<img src="./images/atup.jpg" alt="" width="200">
+		<img src="./images/atup.jpg" alt="" width="100">
+		<img src="./images/atup.jpg" alt="" width="50">
+		<img src="./images/atup.jpg" alt="" width="10">
+		<img src="./images/atup.jpg" alt="" width="1">
+	</figure>
 </body>
 </html>
