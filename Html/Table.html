@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table - 探索实践</title>
+	<style>
+		caption {
+			line-height: 40px;
+			height: 40px
+		}
+		thead tr {
+			height: 40px
+		}
+	</style>
+</head>
+<body>
+
+	<!--
+		table属性
+		 *	border			边框							Number
+		 *	cellpadding		单元格与内容的空白				Number
+		 *	cellspacing		单元格之间的空白				Number
+		 *	frame			外侧边框可见状态				String		会忽视border显示
+		 *	rules			单元格边框可见状态				String		会忽视cellspacing的设定
+		 *	width			表格宽度						Number
+		 
+		 +	summary			表格内容的摘要 ReadP			String
+		 -  align			不赞成使用
+		 -  bgcolor			不赞成使用
+		
+		caption属性
+		 -  align			不赞成使用
+
+		thead | tbody | tfoot属性
+		 *	align			内容中的水平对齐方式			String
+		 *	valign			内容中的垂直对齐方式			String
+		
+		 -	char			设定根据那个字符来对齐 NoL		String
+		 -	charoff			设定对齐字符的偏移量 NoL		Number
+		
+		tr属性（其余同thead）
+		 -	bgcolor			不赞成使用
+		
+		th属性
+		 *	align			内容中的水平对齐方式			String
+
+		 +	abbr			内容的缩写版本 ReadP			String
+		 -	axis		   
+		 -	bgcolor			不赞成使用
+		 -	height			不赞成使用
+
+		浏览器不支持  NoL   屏幕阅读器（效果） ReadP
+	-->
+	<table
+		border="10"
+		cellpadding="2px"
+		cellspacing="20px"
+		frame="border"
+		rules="groups"
+		summary="表格内容的摘要（用于屏幕阅读器上）"
+		width="500"
+	>
+		<caption align="left">表格标题</caption>
+		<thead
+			align="left"
+			valign="bottom"
+		>
+			<tr>
+				<th
+					abbr="Name"
+					align="center"
+				>
+					Name
+				</th>
+				<th>Age</th>
+				<th>Address</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>John Brown</td>
+				<td>32</td>
+				<td>New York No. 1 Lake Park</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>42</td>
+				<td>London No. 1 Lake Park</td>
+			</tr>
+			<tr>
+				<td>Joe Black</td>
+				<td>36</td>
+				<td>Sidney No. 1 Lake Park</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

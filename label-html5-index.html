@@ -38,9 +38,11 @@
 	<audio controls="controls" src="http://fs.w.kugou.com/201903071726/57d8868c40457b87101a9d53ea429ae1/G121/M00/10/04/GYcBAFx-bhSAeslmAEjbs1lzWOU136.mp3">您的浏览器不支持 audio 标签。</audio>
 
 	<!-- 定义视频，视频不能播放 -->
-	<video width="400" height="400" autoplay>
+	<video width="400" height="400" controls>
 		<!-- 定义媒介源 -->
-		<source src="./images/lolmv.avi" type="video/avi"></source>
+		<source src="http://www.w3school.com.cn/i/movie.ogg" type=""></source>
+		<!-- 定义媒体播放器中的文本轨迹（部分浏览器支持） -->
+		<track kind="subtitles" src="http://www.w3school.com.cn/subs_chi.srt" srclang="zh" label="Chinese">111</track>
 	</video>
 	
 	<!-- 定义图形（需要结合js来显示，canvas.getContext(2d)） -->
@@ -63,9 +65,6 @@
 	</progress>
 	<progress value="8" max="100">10</progress>
 	<progress></progress>
-
-	<!-- 定义日期、时间（目前浏览器不支持该标签） -->
-	<time datatime="9:00">9:00上班</time>
 
 	<!-- 定义ruby注释（定义文字，通过rt来进行标注小字（如拼音）） -->
 	<ruby>
@@ -109,5 +108,43 @@
 		<img src="./images/atup.jpg" alt="" width="10">
 		<img src="./images/atup.jpg" alt="" width="1">
 	</figure>
+
+	<p>
+		<!-- 定义文本的方向，使其脱离周围文本的方向设置（隔离这块文本，结合dir，需要块级元素才有效。部分浏览器支持） -->
+		Username <bdi dir="rtl" style="display: inline-block; width: 200px">Bill</bdi>:80 points
+
+		<!-- 定义有记号的文本 -->
+		Username <mark>Steve</mark>: 78 points
+	</p>
+	<p style="width: 15px">
+		<!-- 定义可能的换行符，一般用于长单词的换行（需要设定盒子的宽度来看） -->
+		如果想学习 AJAX，那么您必须熟悉 XML<wbr>Http<wbr>Request，XMLHttpRequest 对象。
+	</p>
+
+
+
+	<!-- 定义日期、时间（目前浏览器不支持该标签） -->
+	<time datatime="9:00">9:00上班</time>
+	<!-- 定义命令按钮 -->
+	<menu>
+		<!-- 定义命令按钮（目前浏览器不支持该标签，只有ie9） -->
+		<command checked="checked">菜单
+	</menu>
+	<!-- 定义对话框或窗口（部分浏览器支持）open属性打开 -->
+	<dialog open>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+	</dialog>
+	
+	<!-- 定义外部交互内容或插件（科可视频） -->
+	<embed src="http://www.w3school.com.cn/i/helloworld.swf" type="" width="200px" height="200px" style="border: 1px solid red">
+	<embed src="http://www.w3school.com.cn/i/movie.ogg" type="" width="200px" height="200px" style="border: 1px solid red">
+
+	<!-- 定义预定义范围内的度量（跟progress差不多，ie不支持） -->
+	<meter value="3" min="0" max="10">十分之三</meter>
+	<meter value="0.6" low="10">60%</meter> 
 </body>
 </html>
