@@ -17,14 +17,14 @@
 
 	<!--
 		table属性
-		 *	border			边框							Number
-		 *	cellpadding		单元格与内容的空白				Number
-		 *	cellspacing		单元格之间的空白				Number
-		 *	frame			外侧边框可见状态				String		会忽视border显示
-		 *	rules			单元格边框可见状态				String		会忽视cellspacing的设定
-		 *	width			表格宽度						Number
+		 *	border			边框								Number
+		 *	cellpadding		单元格与内容的空白					Number
+		 *	cellspacing		单元格之间的空白					Number
+		 *	frame			外侧边框可见状态					String		会忽视border显示
+		 *	rules			单元格边框可见状态					String		会忽视cellspacing的设定
+		 *	width			表格宽度							Number
 		 
-		 +	summary			表格内容的摘要 ReadP			String
+		 +	summary			表格内容的摘要 ReadP				String
 		 -  align			不赞成使用
 		 -  bgcolor			不赞成使用
 		
@@ -32,33 +32,46 @@
 		 -  align			不赞成使用
 
 		thead | tbody | tfoot属性
-		 *	align			内容中的水平对齐方式			String
-		 *	valign			内容中的垂直对齐方式			String
+		 *	align			内容中的水平对齐方式				String
+		 *	valign			内容中的垂直对齐方式				String
 		
-		 -	char			设定根据那个字符来对齐 NoL		String
-		 -	charoff			设定对齐字符的偏移量 NoL		Number
+		 -	char			设定根据那个字符来对齐 NoL			String
+		 -	charoff			设定对齐字符的偏移量 NoL			Number
 		
 		tr属性（其余同thead）
 		 -	bgcolor			不赞成使用
 		
 		th属性
-		 *	align			内容中的水平对齐方式			String
-		 *	colspan			单元格横跨的列数				String
+		 *	align			内容中的水平对齐方式				String
+		 *	colspan			单元格横跨的列数					Number
+		 *	rowspan			规定单元格可横跨的行数				Number
+		 *	valign			规定单元格内容的垂直排列方式		String
 
-		 +	abbr			内容的缩写版本 ReadP			String
-		 -	axis			对单元格进行分类 NoL			String
-		 -	bgcolor			不赞成使用
-		 -	height			不赞成使用
-		 -	char			根据那个字符来进行对齐 NoL		String
-		 -	charoff			对齐字符后的偏移量 NoL			String
-		 -	headers			规定表头和表格之间的相关性 NoL	String
+		 +	abbr			内容的缩写版本 ReadP				String
+		 +	headers			规定表头和表格之间的相关性 ReadP	String
 		 					结合id名使用
-		 -	rowspan			规定单元格可横跨的行数			Number
+		 +	scope			将表头、单元 数据相关联的方法 Readp	String
 
-		 -	height			不赞成使用
+		 -	axis			对单元格进行分类 NoL				String
+		 -	bgcolor			不赞成使用
+		 -	char			根据那个字符来进行对齐 NoL			String
+		 -	charoff			对齐字符后的偏移量 NoL				String
 		 -	nowrap			不赞成使用（规定单元格是否折行）
+		 -	width			不赞成使用
+		 -	height			不赞成使用
+							w|h 设置一个即会影响整列或整行
+
+		td属性（属性差不多同th）
+		 *	align			水平对齐方式						String
+		 *	colspan			单元格横跨的列数					Number
+		 *	rowspan			单元格横跨的行数					Number
+		 *	valign			内容垂直方向的对齐方式				String
+		
+		 -	其他不做记录
 
 		浏览器不支持  NoL   屏幕阅读器（效果） ReadP
+
+		PS: 表格可横可竖
 	-->
 	<table
 		border="10"
@@ -70,7 +83,7 @@
 
 		summary="表格内容的摘要（用于屏幕阅读器上）"
 	>
-		<caption align="left">表格标题</caption>
+		<caption align="left">表格标题 - 常规表格</caption>
 		<thead
 			align="left"
 			valign="bottom"
@@ -79,7 +92,7 @@
 			charoff="2px"
 		>	
 			<tr>
-				<th rowspan="2">编号\表头</th>
+				<th rowspan="2" valign="middle">编号\表头</th>
 				<th id="name" 
 					colspan="2"
 					align="center"
@@ -113,14 +126,20 @@
 				<td>New York No. 1 Lake Park</td>
 			</tr>
 			<tr>
-				<td>2</td>
-				<td></td>
-				<td></td>
+				<td
+					align="center"
+					rowspan="2"
+				>2</td>
+				<td
+					valign="top"
+					height="200"
+					width="100"
+					colspan="2"
+				>Wavellite</td>
 				<td>42</td>
 				<td>London No. 1 Lake Park</td>
 			</tr>
 			<tr>
-				<td>3</td>
 				<td>Joe</td>
 				<td>Black</td>
 				<td>36</td>
@@ -129,11 +148,53 @@
 		</tbody>
 		<tfoot>
 			<tr>
-				<td>4</td>
+				<td>3</td>
 				<td>1</td>
 				<td>1</td>
 				<td>2</td>
 				<td>3</td>
+			</tr>
+		</tfoot>
+	</table>
+
+	<table
+		border="1"
+		frame="border"
+		width="100%"
+	>
+		<caption>表格标题 - 垂直的表头</caption>
+		<thead>
+			<tr>
+				<th>表头1</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th>表身2</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th>表身3</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th>脚注</th>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
 			</tr>
 		</tfoot>
 	</table>
