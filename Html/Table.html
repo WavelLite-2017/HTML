@@ -51,6 +51,12 @@
 		 -	height			不赞成使用
 		 -	char			根据那个字符来进行对齐 NoL		String
 		 -	charoff			对齐字符后的偏移量 NoL			String
+		 -	headers			规定表头和表格之间的相关性 NoL	String
+		 					结合id名使用
+		 -	rowspan			规定单元格可横跨的行数			Number
+
+		 -	height			不赞成使用
+		 -	nowrap			不赞成使用（规定单元格是否折行）
 
 		浏览器不支持  NoL   屏幕阅读器（效果） ReadP
 	-->
@@ -60,7 +66,7 @@
 		cellspacing="20px"
 		frame="border"
 		rules="all"
-		width="500"
+		width="100%"
 
 		summary="表格内容的摘要（用于屏幕阅读器上）"
 	>
@@ -71,42 +77,50 @@
 
 			char="N"
 			charoff="2px"
-		>
+		>	
+			<tr>
+				<th rowspan="2">编号\表头</th>
+				<th id="name" 
+					colspan="2"
+					align="center"
+					height="50"
+					nowrap="nowrap"
+					>------------------- Name yes nowrap -------------------</th>
+				<th>------------------- 年龄 no nowrap -------------------</th>
+				<th>地址</th>
+			</tr>
 			<tr>
 				<th
-					align="center"
-					colspan="2"
-
-
 					abbr="Name"
 					axis="Str"
 					char="N"
 					charoff="2px"
+					headers="name"
 				>
-					Name
+					First Name
 				</th>
-				<th
-					axis="Num"
-				>Age</th>
-				<th
-					axis="Str"
-				>Address</th>
+				<th headers="name">Last Name</th>
+				<th axis="Num">Age</th>
+				<th axis="Str">Address</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
+				<td>1</td>
 				<td>John</td>
 				<td>Brown</td>
 				<td>32</td>
 				<td>New York No. 1 Lake Park</td>
 			</tr>
 			<tr>
+				<td>2</td>
 				<td></td>
 				<td></td>
 				<td>42</td>
 				<td>London No. 1 Lake Park</td>
 			</tr>
 			<tr>
+				<td>3</td>
 				<td>Joe</td>
 				<td>Black</td>
 				<td>36</td>
@@ -115,6 +129,7 @@
 		</tbody>
 		<tfoot>
 			<tr>
+				<td>4</td>
 				<td>1</td>
 				<td>1</td>
 				<td>2</td>
