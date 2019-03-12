@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table - 探索实践</title>
+	<style>
+		caption {
+			line-height: 40px;
+			height: 40px
+		}
+		thead tr {
+			height: 40px
+		}
+	</style>
+</head>
+<body>
+
+	<script>
+	let str = ''
+	for (var i = 0; i < 500; i++) {
+		str += `<table
+				border="10"
+				cellpadding="2px"
+				cellspacing="20px"
+				frame="border"
+				rules="all"
+				width="100%"
+
+				summary="表格内容的摘要（用于屏幕阅读器上）"
+			>
+				<caption align="left">表格标题 - 常规表格</caption>
+				<thead
+					align="left"
+					valign="bottom"
+
+					char="N"
+					charoff="2px"
+				>	
+					<tr>
+						<th rowspan="2" valign="middle">编号\表头</th>
+						<th id="name" 
+							colspan="2"
+							align="center"
+							height="50"
+							nowrap="nowrap"
+							>------------------- Name yes nowrap -------------------</th>
+						<th>------------------- 年龄 no nowrap -------------------</th>
+						<th>地址</th>
+					</tr>
+					<tr>
+						<th
+							abbr="Name"
+							axis="Str"
+							char="N"
+							charoff="2px"
+							headers="name"
+						>
+							First Name
+						</th>
+						<th headers="name">Last Name</th>
+						<th axis="Num">Age</th>
+						<th axis="Str">Address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>John</td>
+						<td>Brown</td>
+						<td>32</td>
+						<td>New York No. 1 Lake Park</td>
+					</tr>
+					<tr>
+						<td
+							align="center"
+							rowspan="2"
+						>2</td>
+						<td
+							valign="top"
+							height="200"
+							width="100"
+							colspan="2"
+						>Wavellite</td>
+						<td>42</td>
+						<td>London No. 1 Lake Park</td>
+					</tr>
+					<tr>
+						<td>Joe</td>
+						<td>Black</td>
+						<td>36</td>
+						<td>Sidney No. 1 Lake Park</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>3</td>
+						<td>1</td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+				</tfoot>
+			</table>
+
+			<table
+				border="1"
+				frame="border"
+				width="100%"
+			>
+				<caption>表格标题 - 垂直的表头</caption>
+				<thead>
+					<tr>
+						<th>表头1</th>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>表身2</th>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+					<tr>
+						<th>表身3</th>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<th>脚注</th>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+				</tfoot>
+			</table>`;
+	}
+	document.getElementsByTagName('body')[0].innerHTML = str
+	</script>
+	
+</body>
+</html>
